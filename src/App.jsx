@@ -12,3 +12,10 @@ const App = () => {
 // SDLC
  
 export default App;
+
+// product list 
+// cost 
+// login page 
+// sign up page 
+// admin 
+// user 
