@@ -1,15 +1,25 @@
 // import logo from './logo.svg';
 // import './App.css';
 import React from "react";
+import Landing from "./Components/Landing";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import AdminLogin from "./Components/AdminLogin";
+import UserLogin from "./Components/UserLogin";
 
 const App = () => {
   return (  
     <div className="App">
-      <h1>Online Purchase</h1>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/adminlogin' element={<AdminLogin/>}/>
+        <Route path='/userlogin' element={<UserLogin/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-// SDLC
+// SDLC seartc ?
  
 export default App;
 
