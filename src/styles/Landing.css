@@ -1,0 +1,29 @@
+.page img{
+    height: 200px;
+    width: 200px;
+}
+
+.page {
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    width: 500px;
+    border: 20px 40px ;
+    position: relative;
+    top: 40px;
+    left: 160px;
+    box-shadow: 0px 0px 10px black ;
+    overflow: hidden;
+    /* overflow: hidden; outside the border its hidden */
+}
+.page:hover{
+    background-color: rgba(231, 225, 225, 0.355);
+    transition: 4.s;
+}
+
+.page a{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+}
