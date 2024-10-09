@@ -4,11 +4,11 @@ const Landing = () => {
     return ( 
         <div className="page">
             <Link to='/adminlogin'>
-            <img src="https://w7.pngwing.com/pngs/306/70/png-transparent-computer-icons-management-admin-silhouette-black-and-white-neck-thumbnail.png" alt="Admin-Login" />
+            <img src="https://static.vecteezy.com/system/resources/previews/029/156/453/non_2x/admin-business-icon-businessman-business-people-male-avatar-profile-pictures-man-in-suit-for-your-web-site-design-logo-app-ui-solid-style-illustration-design-on-white-background-eps-10-vector.jpg" alt="Admin-Login" />
             <h1>Admin Login</h1>
             </Link>
             <Link to='/userlogin'>
-            <img src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-outline-user-icon-png-image_5045523.jpg" alt="User-Login" />
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg" alt="User-Login" />
             <h1>User Login</h1>
             </Link>
         </div>

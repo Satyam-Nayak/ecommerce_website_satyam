@@ -8,7 +8,7 @@ export default function AdminLogin() {
 
   // password set function
 function login(){
-  if(username === "admin" && setpassword === "admin"){
+  if(username === "satyamn120" && setpassword === "satyam120"){
     alert("Admin Login Successfull");
 }
 else{
