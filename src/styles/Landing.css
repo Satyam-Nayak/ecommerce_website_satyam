@@ -29,7 +29,7 @@
 .page a {
     text-align: center;
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     color: #333;
     display: flex;
@@ -40,7 +40,9 @@
 .page h1 {
     margin: 10px 0;
     font-size: 20px;
-    color: #555;
+    color: black;
+    border: 3px solid black;
+    border-radius: 3px;
 }
 
 .page:hover {
