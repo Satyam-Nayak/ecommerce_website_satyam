@@ -1,20 +1,46 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/AdminLogin.css'
+
 export default function AdminLogin() {
   let [username,setUsername] = useState("");
-  let [setpassword,setPassword] = useState("");
-  console.log(username);
-  console.log(setpassword);
+  let [password,setPassword] = useState("");
+  let [admin,setAdmin] = useState([]);
+
+  // Fetch admin data
+  useEffect(()=>{
+    async function fetchAdmin() {
+      let data = await fetch('http://localhost:2626/Admin')
+      let res = await data.json();
+      setAdmin(res)
+    }
+    fetchAdmin()
+  },[]);
+
+// sir wrote the code
+  // function login(){
+  //   admin.includes(username)
+  // }
+
+  function login(event) {
+    event.preventDefault();
+  
+    const adminUser = admin.find(user => user.username === username && user.password === password);
+  
+    alert(adminUser ? "Admin Login Successful" : "Invalid Admin");
+  }
+
+
+
 
   // password set function
-function login(){
-  if(username === "satyamn120" && setpassword === "satyam120"){
-    alert("Admin Login Successfull");
-}
-else{
-  alert("Invalid Admin");
-  }
-}
+// function login(){
+//   if(username === "satyamn120" && setpassword === "satyam120"){
+//     alert("Admin Login Successfull");
+// }
+// else{
+//   alert("Invalid Admin");
+//   }
+// }
 
 
   return (
@@ -27,9 +53,9 @@ else{
         <label htmlFor="">
           Password :
         </label>
-        <input type="password" value={setpassword} onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter the password' required/>
+        <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter the password' required/>
         <button onClick={login}>Login</button>
       </form>
     </div>
-  )
+  );
 }

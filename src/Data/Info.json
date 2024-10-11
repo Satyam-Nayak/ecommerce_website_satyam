@@ -1,0 +1,22 @@
+{
+    "Admin" :
+    [
+        {            
+        "id" : "1",
+        "username" : "sam120@gmail.com",
+        "password" : "sonu26",
+        "phone" : "9969690821" , 
+        "name" : "Sam"
+        },
+
+        {
+            "id" : "2",
+        "username" : "samn120@gmail.com",
+        "password" : "sonu2626",
+        "phone" : "9969690812" , 
+        "name" : "Sam2"
+
+        }       
+
+    ]
+}
