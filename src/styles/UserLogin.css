@@ -1,49 +1,57 @@
 .UserLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: brown;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  button:hover {
-    background-color: #101010;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 10vh; */
+  background-color: #000014; /* Dark blue background */
+}
 
+form {
+  background-color: #001f3f; /* Darker blue form background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 0px 20px 5px rgba(0, 153, 255, 0.7); /* Neon blue glow */
+}
 
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #00ccff; /* Neon blue text */
+}
 
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #000033; /* Darker input background */
+  color: #00ccff; /* Neon text color */
+  border: 2px solid #00ccff; /* Neon blue border */
+  box-sizing: border-box;
+}
 
+input::placeholder {
+  color: #00ccff; /* Placeholder neon blue */
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #ffffff; /* Darker blue button background */
+  color: #000000; /* Neon blue text */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 153, 255, 0.7); /* Neon blue glow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #000000; /* Lighter blue on hover */
+  box-shadow: 0px 0px 15px 5px rgba(0, 153, 255, 1); /* Intense glow on hover */
+  color: white;
+}
 

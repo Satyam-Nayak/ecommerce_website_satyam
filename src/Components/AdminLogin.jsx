@@ -17,37 +17,17 @@ export default function AdminLogin() {
   },[]);
   console.log(admin)
 
-  // satyam========
-  // function login(event) {
-  //   event.preventDefault();
-  
-  //   const adminUser = admin.find(user => user.username === username && user.password === password);
-  
-  //   alert(adminUser ? "Admin Login Successful" : "Invalid Admin");
-  // }
-
-  // satyam========
-  // function login(x) {
-  //   x.preventDefault(); 
-  
-  //   const value = admin.filter(user => user.username === username && user.password === password);
-    
-  //   alert(value.length > 0 ? "Admin Login Successful" : "Invalid Admin");
-  // }
-
+// password set function
   function login() {
     let value = admin.filter((x)=>
       {return x.username === username && x.password === password})
     alert(value.length > 0 ? "Admin Login Successful" : "Invalid Admin");
   }
 
-  // password set function
-
-
 
   return (
     <div className='AdminLogin'>
-      <form action="">
+      <form className='admin1' action="">
         <label htmlFor="">
           Username :
         </label>

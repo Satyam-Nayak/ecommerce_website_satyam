@@ -6,6 +6,64 @@
     width: 600px;
     margin: 100px auto;
     padding: 20px;
+    border: 2px solid #00bfff; /* Neon blue border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Neon blue shadow */
+    background-color: #000033; /* Dark blue background */
+    transition: background-color 0.4s ease;
+}
+
+.page img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    border: 3px solid #00bfff; /* Neon blue border */
+    border-radius: 50%; /* Rounded images for a sleek look */
+}
+
+.page img:hover {
+    transform: scale(1.1);
+}
+
+.page a {
+    text-align: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #00bfff; /* Neon blue text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ffffff; /* Neon blue text */
+    border: 3px solid #00bfff; /* Neon blue border */
+    border-radius: 3px;
+}
+
+.page:hover {
+    background-color: #000033; /* Consistent dark blue background on hover */
+}
+
+.page a:hover h1 {
+    color: #ffffff; /* Slightly lighter blue on hover */
+    background-color: #9b037d;
+    border: 3px solid #e23f04;
+}
+
+
+/* .page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    width: 600px;
+    margin: 100px auto;
+    padding: 20px;
     border: 2px solid #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -51,7 +109,7 @@
 
 .page a:hover h1 {
     color: #007bff;
-}
+} */
 
 
 

@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/UserLogin.css';
 
 export default function UserLogin() {
   let [username, setUsername] = useState("");
-  let [password, setPassword] = useState(""); // corrected here
-  
-  console.log(username);
-  console.log(password); // corrected here
+  let [password, setPassword] = useState("");
+  let [user, setUser] = useState([]); 
 
-  // password set function
-  function login() {
-    if (username === "satyamn120" && password === "satyam120") { // corrected here
-      alert("User Login Successful");
-    } else {
-      alert("Invalid User");
+  // Fetch user data
+  useEffect(() => {
+    async function fetchUser() {
+      try {
+        let data = await fetch('http://localhost:2626/Admin');
+        let res = await data.json();
+        setUser(res); 
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
     }
+    fetchUser(); 
+  }, []);
+  console.log(user)
+
+  // Login function with validation
+  function login() {
+    if (!username || !password) {
+      alert("Username and Password cannot be empty");
+      return;
+    }
+    let value = user.filter((x) =>  // Changed from admin to user
+      x.username.toLowerCase() === username.toLowerCase() && x.password === password
+    );
+    alert(value.length > 0 ? "User Login Successful" : "Invalid User"); // Changed message accordingly
   }
 
   return (
@@ -35,8 +51,8 @@ export default function UserLogin() {
         </label>
         <input 
           type="password" 
-          value={password} // corrected here
-          onChange={(e) => setPassword(e.target.value)} // corrected here
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} 
           placeholder='Enter the password' 
           required
         />
