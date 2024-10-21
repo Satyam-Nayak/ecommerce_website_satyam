@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/AdminLogin.css'
+import { Link } from "react-router-dom";
 
 export default function AdminLogin() {
   let [username,setUsername] = useState("");
@@ -36,7 +37,11 @@ export default function AdminLogin() {
           Password :
         </label>
         <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter the password' required/>
-        <button onClick={login}>Login</button>
+        <button style={{borderRadius:'4px',marginTop:'20px'}} onClick={login}>Login</button>
+        <br />
+        <span style={{color: 'white'}}>Click here to :
+        <Link to='/adminsignup'> Sign Up</Link></span>
+        
       </form>
     </div>
   );
