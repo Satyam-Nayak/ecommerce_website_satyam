@@ -1,13 +1,15 @@
+/* Basic styling for body with a simple background color */
 html, body {
-    height: 70%; /* Make sure the body takes up the full viewport height */
-    margin-top: 80px;
+    height: 100%;
+    margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000033; /* Optional: Background color for the body */
 }
 
+/* Styling for the form container (.page) */
 .page {
     display: flex;
     justify-content: space-around;
@@ -20,7 +22,6 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Neon blue shadow */
     background-color: #000033; /* Dark blue background */
     transition: background-color 0.4s ease;
-    position: relative; /* Ensures it's responsive in its parent */
 }
 
 .page img {

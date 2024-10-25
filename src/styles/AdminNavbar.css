@@ -1,0 +1,33 @@
+/* General styling for AdminNavbar */
+.AdminNavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333; /* Dark background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Logo styling */
+.AdminNavbar .logo h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.AdminNavbar .logo span {
+    color: #00bfff; /* Different color for 'Kart' */
+}
+
+/* Account dropdown styling */
+.AdminNavbar .account {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}

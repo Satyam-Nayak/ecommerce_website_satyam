@@ -1,0 +1,18 @@
+/* General styling for AdminHomePage */
+.adminHome1 {
+    padding-top: 60px; /* Adjust to navbar height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f9f9f9; /* Optional: light background */
+    margin: 0;
+}
+
+.adminHome1 h1 {
+    margin-top: 20px; /* Space below navbar */
+    color: #333;
+    font-size: 28px;
+}
