@@ -1,16 +1,26 @@
+html, body {
+    height: 70%; /* Make sure the body takes up the full viewport height */
+    margin-top: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000033; /* Optional: Background color for the body */
+}
+
 .page {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 400px;
     width: 600px;
-    margin: 100px auto;
     padding: 20px;
     border: 2px solid #00bfff; /* Neon blue border */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 255, 0.4); /* Neon blue shadow */
     background-color: #000033; /* Dark blue background */
     transition: background-color 0.4s ease;
+    position: relative; /* Ensures it's responsive in its parent */
 }
 
 .page img {
@@ -19,7 +29,7 @@
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     border: 3px solid #00bfff; /* Neon blue border */
-    border-radius: 50%; /* Rounded images for a sleek look */
+    border-radius: 50%; /* Rounded images */
 }
 
 .page img:hover {
@@ -40,13 +50,9 @@
 .page h1 {
     margin: 10px 0;
     font-size: 20px;
-    color: #ffffff; /* Neon blue text */
+    color: #ffffff; /* White text */
     border: 3px solid #00bfff; /* Neon blue border */
     border-radius: 3px;
-}
-
-.page:hover {
-    background-color: #000033; /* Consistent dark blue background on hover */
 }
 
 .page a:hover h1 {
@@ -54,92 +60,3 @@
     background-color: #9b037d;
     border: 3px solid #e23f04;
 }
-
-
-/* .page {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 400px;
-    width: 600px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    transition: background-color 0.4s ease;
-}
-
-
-
-.page img {
-    height: 150px;
-    width: 150px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.page img:hover {
-    transform: scale(1.1);
-}
-
-.page a {
-    text-align: center;
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.page h1 {
-    margin: 10px 0;
-    font-size: 20px;
-    color: black;
-    border: 3px solid black;
-    border-radius: 3px;
-}
-
-.page:hover {
-    background-color: white;
-}
-
-.page a:hover h1 {
-    color: #007bff;
-} */
-
-
-
-/* .page img{
-    height: 200px;
-    width: 200px;
-}
-
-.page {
-    display: flex;
-    justify-content: space-around;
-    height: 400px;
-    width: 500px;
-    border: 20px 40px ;
-    position: relative;
-    top: 40px;
-    left: 160px;
-    box-shadow: 0px 0px 10px black ;
-    overflow: hidden;
-}
-.page:hover{
-    background-color: rgba(231, 225, 225, 0.355);
-    transition: 4.s;
-}
-
-.page a{
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(0, 0, 0);
-} */
-
-    /* overflow: hidden; outside the border its hidden */

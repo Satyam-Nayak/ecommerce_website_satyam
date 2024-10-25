@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/AdminLogin.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AdminLogin() {
   let [username,setUsername] = useState("");
@@ -19,10 +19,16 @@ export default function AdminLogin() {
   console.log(admin)
 
 // password set function
+let navigate = useNavigate();
   function login() {
     let value = admin.filter((x)=>
       {return x.username === username && x.password === password})
-    alert(value.length > 0 ? "Admin Login Successful" : "Invalid Admin");
+    if(value.length > 0){
+      alert("Login Successfull");
+      navigate("/adminhomepage");
+    } else{
+      alert("Invalid Credentials");
+    }
   }
 
 

@@ -1,22 +1,33 @@
 {
-    "Admin" :
-    [
-        {            
-        "id" : "1",
-        "username" : "sam120@gmail.com",
-        "password" : "sonu26",
-        "phone" : "9969690821" , 
-        "name" : "Sam"
-        },
-
-        {
-            "id" : "2",
-        "username" : "samn120@gmail.com",
-        "password" : "sonu2626",
-        "phone" : "9969690812" , 
-        "name" : "Sam2"
-
-        }       
-
-    ]
+  "Admin": [
+    {
+      "id": "1",
+      "username": "sam120@gmail.com",
+      "password": "sonu26",
+      "phone": "9969690821",
+      "name": "Sam"
+    },
+    {
+      "id": "2",
+      "username": "samn120@gmail.com",
+      "password": "sonu2626",
+      "phone": "9969690812",
+      "name": "Sam2"
+    },
+    {
+      "id": "c737",
+      "name": "Satyam Nayak",
+      "password": "swswswss",
+      "phone": "9988998899",
+      "email": "saty12@gmail.com"
+    }
+  ],
+  "User": [{
+    "id": "1",
+    "username": "sam120@gmail.com",
+    "password": "sonu26",
+    "phone": "9969690821",
+    "name": "Sam"
+  }
+]
 }
