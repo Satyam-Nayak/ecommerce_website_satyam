@@ -1,7 +1,9 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AdminAccount from './AccountDropdown'
 import '../styles/AdminNavbar.css'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 export default function AdminNavbar() {
   return (
@@ -9,12 +11,12 @@ export default function AdminNavbar() {
         <div className='logo'>
             <h1>E<span>Kart</span></h1>
         </div>
+
+        <div className='links'>
+     <Link to='/adminhomepage/viewproducts'>ShoppingList</Link>
+     <Link to='/adminhomepage/viewcart'><ShoppingCartIcon/>Cart</Link>
+     </div>
         <AdminAccount/>
-        {/* <div className='links'>
-            <Link to='/viewproducts'>ShoppingList</Link>
-            <Link to='/viewcart'><Shopingcarticon/>Cart</Link>
-        </div> */}
-        
     </div>
   )
 }

@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     min-height: 100vh;
     min-width: 100vw;
     background-color: #f9f9f9; /* Optional: light background */
@@ -15,4 +14,20 @@
     margin-top: 20px; /* Space below navbar */
     color: #333;
     font-size: 28px;
+}
+
+/* Content section styling */
+.homestart {
+    flex: 1; /* Takes up available space */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
 }
