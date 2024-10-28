@@ -3,31 +3,32 @@ import '../styles/AdminAddProduct.css'
 
 export default function AdminAddProduct() {
   return (
-    <div className="addproducts">
-        <form action="">
-            <fieldset>
-                <legend>Product</legend>
-                <label htmlFor="">
-                    Catagory:
-                </label>
-                <select>
-                    <option >bANDO</option>
-                    <option >pELO</option>
-                    <option >Bia</option>
-                    <option >Giha</option>
-                    <option >Chup Mh</option>
-                    <option >to bando</option>
-                </select>
-                <label htmlFor="">
-                    Product Name:
-                </label>
-                <input type="text" />
-                <label htmlFor="">Product Price:</label>
-                <input type="number" />
-
-            </fieldset>
-        </form>
-      
+    <div className="addproduct">
+      <form action="">
+        <fieldset>
+          <label htmlFor="">Category</label>
+          <select>
+            <option>Dress Materials</option>
+            <option>Mobile</option>
+            <option>Mobile Accessories</option>
+            <option>Electronics</option>
+            <option>Groceries</option>
+          </select>
+          <label htmlFor="">Product Name</label>
+          <input type="text" placeholder="Enter the Product" />
+          <label htmlFor="">Product Price</label>
+          <input type="text" placeholder="Enter the price" />
+          <label htmlFor="">Description</label>
+          <textarea rows="2" cols="30" placeholder="Enter the details"></textarea>
+          <label htmlFor="">Thumbnail</label>
+          <input type="text" placeholder="Enter the image address" />
+          <label htmlFor="">Ratings</label>
+          <input type="number" placeholder="Enter the ratings" />
+          <div className="button-container">
+            <button className="btn btn-danger">Add Product</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
-  )
+  );
 }

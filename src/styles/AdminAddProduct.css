@@ -1,7 +1,60 @@
-/* .addproducts fieldset{
+.addproduct fieldset {
     display: grid;
-    grid-template-rows: 100px 100px;
+    grid-template-columns: 200px 200px;
+    align-items: center;
     border: 2px solid black;
     border-radius: 10px;
-    
-} */
+    width: 450px;
+    height: 600px;
+    margin: 110px auto 300px;
+    padding: 20px;
+  }
+  
+  .addproduct form {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .addproduct label {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .addproduct label:hover {
+    cursor: progress;
+  }
+  
+  .addproduct input, .addproduct textarea, .addproduct select {
+    border: none;
+    border-bottom: 2px solid black;
+  }
+  
+  /* Center the button and style it */
+  .button-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
