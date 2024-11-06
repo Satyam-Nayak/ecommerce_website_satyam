@@ -8,6 +8,10 @@ import AdminSignUp from './Components/AdminSignUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminHomePage from './Components/AdminHomePage';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AdminAddProduct from './Components/AdminAddProduct';
+
 
 
 const App = () => {
@@ -20,8 +24,11 @@ const App = () => {
         <Route path='/userlogin' element={<UserLogin/>}/>
         <Route path='/adminsignup' element={<AdminSignUp/>}/>
         <Route path='/adminhomepage' element={<AdminHomePage/>}/>
+        <Route path='/adminaddproduct' element={<AdminAddProduct/>}/>
       </Routes>
       </BrowserRouter>
+      <ToastContainer/>
+      
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function AdminHomePage() {
         <AdminNavbar/>
         <div className='homestart'>
         <h1 >Hello Admin</h1>
-        <AdminAddProduct/>
+        {/* <AdminAddProduct/> */}
         </div>
         
         <Footer/>
