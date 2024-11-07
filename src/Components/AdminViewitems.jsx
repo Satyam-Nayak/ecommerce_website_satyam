@@ -1,33 +1,53 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import AdminNavbar from './AdminNavbar'
+import "../Style/AdminViewItems.css";
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
-export default function AdminViewitems() {
-    const [products, setProducts] = useState([]);
+export default function AdminViewItems() {
+  let [product, setProduct] = useState([]);
+  let [force, setForce] = useState(0);
 
-    useEffect(() => {
-        function fetchData() {
-            axios.get('http://localhost:2626/products')
-                .then((res) => {
-                    setProducts(res.data);
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-        }
-        fetchData();
-    }, []);
+  useEffect(() => {
+    function fetchdata() {
+      axios.get('http://localhost:2626/Product')
+        .then((res) => {
+          console.log(res.data);
+          setProduct(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchdata();
+  }, [force]);
+  console.log(product);
 
-    return (
-        <>
-        <div className='AdminViewItems'>
-            <h1>Product List</h1>
-            <ul>
-                {products.map(product => (
-                    <li key={product.id}>{product.name}</li>
-                ))}
-            </ul>
+  function deleteProduct(id, name) {
+    axios.delete(`http://localhost:2626/Product/${id}`)
+      .then(() => {
+        toast.success(`${name} Deleted successfully`);
+        setForce(force + 1);
+      })
+      .catch(() => {
+        toast.error('Data not present');
+      });
+  }
+
+  return (
+    <div className='AdminViewItems'>
+      {product.map((product) => (
+        <div key={product.id} className="sub_Item">
+          <h1>{product.name}</h1>
+          <h3>{product.category}</h3>
+          <img src={product.image} alt={product.name} />
+          <h1>{product.price}</h1>
+          <p>{product.description}</p>
+          <br />
+          <button onClick={()=>{editPage(product.id,product.name)}} className='delete'>Delete</button>
+          <button onClick={() => deleteProduct(product.id, product.name)} className='delete'>Delete</button>
         </div>
-        </>
-    );
+      ))}
+    </div>
+  );
 }
